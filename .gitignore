@@ -1,0 +1,112 @@
+# =============================================================
+# R Project .gitignore
+# R + Plumber API | React/Vite Frontend | XGBoost ML Models
+# =============================================================
+
+# ---------------------------
+# R / RStudio
+# ---------------------------
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.Rproj.user/
+*.Rproj
+.Renviron
+
+# R packrat / renv environments
+packrat/lib*/
+packrat/src/
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/staging/
+renv/.python-version
+
+# ---------------------------
+# R Data & Model Artifacts
+# (large binary files — regenerate via run_all.R)
+# ---------------------------
+models/*.rds
+models/*.model
+models/*.pkl
+
+data/*.rds
+data/*.RData
+
+# Large source CSV (tracked via Git LFS or excluded)
+titles.csv
+data/genres_long.csv
+
+# ---------------------------
+# Plots (auto-generated)
+# ---------------------------
+# Comment out the next line if you want to keep plots in git
+plots/
+
+# ---------------------------
+# Node.js / React / Vite (UI/)
+# ---------------------------
+UI/node_modules/
+UI/dist/
+UI/build/
+UI/.vite/
+UI/.env
+UI/.env.local
+UI/.env.*.local
+
+# Logs
+UI/npm-debug.log*
+UI/yarn-debug.log*
+UI/yarn-error.log*
+UI/pnpm-debug.log*
+UI/.pnpm-debug.log*
+
+# TypeScript build info
+UI/*.tsbuildinfo
+
+# ---------------------------
+# Environment & Secrets
+# ---------------------------
+.env
+.env.local
+.env.*.local
+# Keep the example file
+!.env.example
+!UI/.env.example
+
+# ---------------------------
+# OS & Editor Artifacts
+# ---------------------------
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains / RStudio
+.idea/
+*.suo
+*.user
+
+# ---------------------------
+# Miscellaneous
+# ---------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
