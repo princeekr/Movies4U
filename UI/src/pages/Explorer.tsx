@@ -32,7 +32,7 @@ function mapApiToUI(r: TitleRecord): UITitle {
     title: r.title,
     type: r.show_type,
     releaseYear: r.release_year,
-    ageCertification: 'N/A',
+    ageCertification: r.age_certification ?? '',
     runtime: 0,
     genres: r.primary_genre ? [r.primary_genre] : [],
     productionCountries: [],
@@ -203,8 +203,12 @@ export function Explorer() {
                     <span>{title.releaseYear}</span>
                     <span>•</span>
                     <span>{title.type === 'MOVIE' ? 'Movie' : 'TV Show'}</span>
-                    <span>•</span>
-                    <span>{title.ageCertification}</span>
+                    {title.ageCertification && (
+                      <>
+                        <span>•</span>
+                        <span>{title.ageCertification}</span>
+                      </>
+                    )}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

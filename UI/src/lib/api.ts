@@ -155,6 +155,7 @@ export interface TitleRecord {
   primary_genre: string;
   imdb_score: number;
   release_year: number;
+  age_certification: string | null;
 }
 
 export async function fetchTitles(): Promise<TitleRecord[]> {

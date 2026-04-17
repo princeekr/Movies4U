@@ -172,7 +172,7 @@ function(genre = "drama", runtime = 90, year = 2022, show_type = "MOVIE",
 #* @serializer json
 function() {
   df |>
-    select(id, title, show_type, primary_genre, imdb_score, release_year) |>
+    select(id, title, show_type, primary_genre, imdb_score, release_year, age_certification) |>
     filter(!is.na(title))
 }
 

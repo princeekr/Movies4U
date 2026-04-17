@@ -1,7 +1,10 @@
 # 01_clean.R — Data Cleaning & Feature Engineering
+
+# setting up paths
 .libPaths(c("C:/Users/HP/R/library", .libPaths()))
 setwd("C:/Users/HP/OneDrive/Desktop/R_project")
 
+#all libraries
 library(readr)
 library(dplyr)
 library(tidyr)
